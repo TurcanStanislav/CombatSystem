@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackZone : MonoBehaviour
 {
     CombatSystem combatSystem;
+    string id = "Enemy";
 
     private void Start()
     {
@@ -14,8 +13,8 @@ public class AttackZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         print("Attacking " + collider.name);
-        collider.GetComponent<Enemy>().TakeDamage(combatSystem.attackDamage);
+        if(collider.name == "EnemyCollider") collider.GetComponentInParent<Enemy>().TakeDamage(combatSystem.attackDamage);
+        if(collider.GetComponentInParent<Enemy>().currentHealth > 0) GetComponentInParent<Repulsion>().AttackRepulsion(id);
     }
-
 
 }

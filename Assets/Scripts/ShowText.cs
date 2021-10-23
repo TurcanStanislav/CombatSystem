@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +6,9 @@ public class ShowText : MonoBehaviour
     public string textValue;
     public Text textElement;
 
-    public void ShowHP(int HP) 
+    public void ShowHP(int HP, string str) 
     {
-        textElement.text = "Enemy's current health: " + HP;
+        textElement.text = str + "'s current health: " + HP;
     }
 
     // Start is called before the first frame update
