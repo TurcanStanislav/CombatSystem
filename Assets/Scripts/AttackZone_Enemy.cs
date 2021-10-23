@@ -16,7 +16,9 @@ public class AttackZone_Enemy : MonoBehaviour
     {
         print("Attacking " + collider.name);
         if(collider.name == "InterractZone") collider.GetComponentInParent<Player>().TakeDamage(combatSystem_Enemy.attackDamage);
-        if(collider.GetComponentInParent<Player>().currentHealth > 0) GetComponentInParent<Repulsion>().AttackRepulsion(id);
+
+        if(collider.GetComponentInParent<Player>().currentHealth > 0 && collider.name == "InterractZone") 
+            GameObject.FindGameObjectWithTag("Enemy").GetComponent<Repulsion>().playerRepulsioned = true;
     }
 
 }

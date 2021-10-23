@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TextField
   - PlayerHealth
+  - EnemyCollider
   layers:
   - Default
   - TransparentFX

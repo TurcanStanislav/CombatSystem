@@ -124,8 +124,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   t: {fileID: 0}
   m_speed: 2
-  maxHealth: 160
+  maxHealth: 600
+  currentHealth: 0
   stop: 0
+  isAlive: 1
 --- !u!95 &95346456782871180
 Animator:
   serializedVersion: 3

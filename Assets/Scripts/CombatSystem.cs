@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CombatSystem : MonoBehaviour
@@ -8,6 +9,7 @@ public class CombatSystem : MonoBehaviour
     //public LayerMask enemyLayer;
     //public float attackRange = 0.5f; 
     
+    public Boolean isAttacking = false;
     public int attackDamage = 40;
 
     // Update is called once per frame

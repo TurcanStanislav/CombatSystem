@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
     public ShowText         t;
     public float            m_speed = 2.0f;
     public int              maxHealth = 1000;
-    public int                     currentHealth;
+    public int              currentHealth;
     public Boolean          stop = false;
     public Boolean          isAlive = true;
 
@@ -83,6 +83,7 @@ public class Player : MonoBehaviour {
             else
                 m_animator.SetInteger("AnimState", 2);
         }
+       // m_body2d.velocity = new Vector2(m_body2d.position.x + 5.0f, m_body2d.position.y);
     }
 
     public void setState(string str)

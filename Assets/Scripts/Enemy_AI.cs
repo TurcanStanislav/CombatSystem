@@ -5,6 +5,7 @@ public class Enemy_AI : MonoBehaviour
 {
     public AttackZone_Enemy attackZone_Enemy;
     Boolean onCollision = false;
+    public Boolean stop = false;
     float time = 2.0f;
     float timeToAttack = 2.0f;
 
@@ -30,12 +31,13 @@ public class Enemy_AI : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collider)
     {
         onCollision = false;
+        stop = false;
     }
 
 
     void Update()
     {
-        if(GetComponentInParent<Enemy>().isAlive && FindObjectOfType<Player>().isAlive)
+        if(GetComponentInParent<Enemy>().isAlive && FindObjectOfType<Player>().isAlive && !stop)
             if(!onCollision)
             {
                 GetComponentInParent<Enemy>().Move();
