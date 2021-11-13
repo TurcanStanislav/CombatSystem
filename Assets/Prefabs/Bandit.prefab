@@ -144,7 +144,7 @@ MonoBehaviour:
   m_animator: {fileID: 95734438044755836}
   t: {fileID: 0}
   m_speed: 2
-  maxHealth: 1000
+  maxHealth: 300
   currentHealth: 0
   isAlive: 1
 --- !u!114 &5524559958339416578
@@ -173,8 +173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c609901f08e424dbc73734cab003b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRB: {fileID: 0}
-  enemyRB: {fileID: 0}
+  playerRB: {fileID: 50512961935941442, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+  enemyRB: {fileID: 50959880312528810}
+  playerRepulsioned: 0
   enemyRepulsioned: 0
 --- !u!1 &5910896707140768546
 GameObject:

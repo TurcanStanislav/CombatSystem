@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
     public ShowText         t;
     public float            m_speed = 2.0f;
     public int              maxHealth = 1000;
-    public int                     currentHealth;
+    public int              currentHealth;
     public Boolean          isAlive = true;
 
 
@@ -47,15 +47,11 @@ public class Enemy : MonoBehaviour {
         Debug.Log("Enemy died!");
         setState("Death");
         isAlive = false;
-        
+    
+        GameObject.FindGameObjectWithTag("Respawn").GetComponent<Spawn>().Respawn();
         GetComponentInChildren<Collider2D>().enabled = false;
         m_body2d.constraints = (RigidbodyConstraints2D)RigidbodyConstraints.FreezePosition;
         this.enabled = false;
-    }
-
-    void Respawn()
-    {
-        //Spawn a new enemy after the previous' death
     }
 
 	// Update is called once per frame

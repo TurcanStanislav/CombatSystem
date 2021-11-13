@@ -13,9 +13,14 @@ public class AttackZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         print("Attacking " + collider.name);
-        if(collider.name == "EnemyCollider" && GetComponentInParent<CombatSystem>().isAttacking == true) collider.GetComponentInParent<Enemy>().TakeDamage(combatSystem.attackDamage);
-        if(collider.GetComponentInParent<Enemy>().currentHealth > 0 && collider.name == "EnemyCollider") GetComponentInParent<Repulsion>().AttackRepulsion(id);
-        GameObject.FindGameObjectWithTag("EnemyCollider").GetComponent<Enemy_AI>().stop = true;
+        if(collider.name == "EnemyCollider" && GetComponentInParent<CombatSystem>().isAttacking == true) 
+            collider.GetComponentInParent<Enemy>().TakeDamage(combatSystem.attackDamage); 
+    }
+
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        if(collider.GetComponentInParent<Enemy>().currentHealth > 0 && collider.name == "EnemyCollider") 
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Repulsion>().enemyRepulsioned = true;  
     }
 
 }

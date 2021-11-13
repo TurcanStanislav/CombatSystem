@@ -42,12 +42,12 @@ public class CombatSystem : MonoBehaviour
         animator.SetTrigger("PowerAttack");
     }
 
-    void StopMotion()
+    public void StopMotion()
     {
         GetComponentInParent<Player>().stop = true;
     }
 
-    void StartMotion()
+    public void StartMotion()
     {
         GetComponentInParent<Player>().stop = false;
     }

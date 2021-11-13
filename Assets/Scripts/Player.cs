@@ -83,7 +83,6 @@ public class Player : MonoBehaviour {
             else
                 m_animator.SetInteger("AnimState", 2);
         }
-       // m_body2d.velocity = new Vector2(m_body2d.position.x + 5.0f, m_body2d.position.y);
     }
 
     public void setState(string str)

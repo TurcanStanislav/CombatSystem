@@ -16,6 +16,11 @@ public class CombatSystem_Enemy : MonoBehaviour
     
     }
 
+    void Start()
+    {
+        animator = GetComponent<Enemy>().GetComponentInParent<Animator>();
+    }
+
     void Attack()
     {
         attackDamage = 40;

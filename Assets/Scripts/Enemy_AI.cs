@@ -31,7 +31,7 @@ public class Enemy_AI : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collider)
     {
         onCollision = false;
-        stop = false;
+        //stop = false;
     }
 
 
@@ -40,6 +40,7 @@ public class Enemy_AI : MonoBehaviour
         if(GetComponentInParent<Enemy>().isAlive && FindObjectOfType<Player>().isAlive && !stop)
             if(!onCollision)
             {
+                Debug.Log("BBBBBBBBBBBBBBBBBBBB");
                 GetComponentInParent<Enemy>().Move();
                 GetComponentInParent<Enemy>().setState("Run");
             }

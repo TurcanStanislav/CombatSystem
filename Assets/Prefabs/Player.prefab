@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95346456782871180}
+  isAttacking: 0
   attackDamage: 40
 --- !u!114 &1432036944794874931
 MonoBehaviour:
@@ -246,7 +247,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRB: {fileID: 50512961935941442}
-  enemyRB: {fileID: 0}
+  enemyRB: {fileID: 50959880312528810, guid: 3248535f6a2562c489a1223a75951ef2, type: 3}
+  playerRepulsioned: 0
+  enemyRepulsioned: 0
 --- !u!1 &213422522075483473
 GameObject:
   m_ObjectHideFlags: 0
